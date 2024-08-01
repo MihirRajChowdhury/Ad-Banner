@@ -1,0 +1,31 @@
+{
+    "banners": [
+      {
+        "id": "1",
+        "title": "Summer Sale",
+        "Description" : "This is some sample description",
+        "BackgroundTemplate": "/sample.jpg",
+        "Image" : ["/sample.jpg" , "/sample.jpg" , "/sample.jpg" , "/sample.jpg"],
+        "cta":"Explore Now"
+        
+      },
+      {
+        "id": "2",
+        "title": "Winter Collection",
+        "Description" : "This is some sample description",
+        "BackgroundTemplate": "/sample.jpg",
+        "Image" : ["/sample.jpg" , "/sample.jpg" , "/sample.jpg" , "/sample.jpg"],
+        "cta":"Explore Now"
+        
+      },
+      {
+        "id": "3",
+        "title": "New Arrivals",
+        "Description" : "This is some sample description",
+        "BackgroundTemplate": "/sample.jpg",
+        "Image" : ["/sample.jpg" , "/sample.jpg" , "/sample.jpg" , "/sample.jpg"],
+        "cta":"Explore Now"
+        
+      }
+    ]
+  }
