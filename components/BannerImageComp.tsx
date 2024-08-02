@@ -26,13 +26,13 @@ const BannerImageComp = ({
   forEdit,
 }: BannerImageCompProps) => {
   return (
-    <div className="relative w-400 h-400">
+    <div className={forEdit ? "relative w-400 h-80" : "relative w-400 h-400"}>
       <Image
         src={BackgroundTemplate}
         width={400}
         height={400}
         alt="background-template"
-        className="absolute inset-0 h-[300px] w-[400px] object-cover"
+        className="absolute rounded-lg border-4 border-gray-400 inset-0 h-[300px] w-[400px] object-cover"
       />
       <Image
         src={imgsrc}

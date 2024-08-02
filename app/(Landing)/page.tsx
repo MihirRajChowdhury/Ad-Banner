@@ -2,7 +2,9 @@
 import AdBannerData from "@/bannerdata.json";
 import BannerImageComp from "@/components/BannerImageComp";
 import EditBannerTemplateBs from "@/components/EditBannerTemplateBs";
+import Link from "next/link";
 import { useState } from "react";
+import { FaGithub } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import internal from "stream";
 
@@ -45,7 +47,17 @@ export default function Home() {
   };
 
   return (
-    <div className="h-screen  w-full">
+    <div className="min-h-screen flex flex-col items-center pt-5  w-full">
+      <div className="flex flex-col gap-1">
+        <p className="text-5xl text-gray-800 font-semibold ">Ad-Banners</p>
+        <Link
+          href={"https://github.com/deepanshu2711/Ad-Banner"}
+          className="flex bg-gray-950 mt-4 p-2 rounded-lg items-center justify-around"
+        >
+          <FaGithub className="text-white h-8 w-8" />
+          <p className="text-white text-lg font-semibold">Explore On Github</p>
+        </Link>
+      </div>
       <div className="max-w-7xl  mx-auto w-full h-screen pt-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-5">
           {bannerdata.banners.map((banner) => (

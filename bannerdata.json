@@ -5,7 +5,7 @@
         "title": "Summer Sale",
         "Description" : "This is some sample description",
         "BackgroundTemplate": "/template1.jpg",
-        "Image" : "/sample.jpg",
+        "Image" : "/sample1.jpg",
         "cta":"Explore Now"
         
       },
@@ -14,7 +14,7 @@
         "title": "Winter Collection",
         "Description" : "This is some sample description",
         "BackgroundTemplate": "/template2.jpg",
-        "Image" : "/sample.jpg",
+        "Image" : "/sample2.jpg",
         "cta":"Explore Now"
         
       },
@@ -23,7 +23,34 @@
         "title": "New Arrivals",
         "Description" : "This is some sample description",
         "BackgroundTemplate": "/template3.jpg",
-        "Image" : "/sample.jpg",
+        "Image" : "/sample3.jpg",
+        "cta":"Explore Now"
+        
+      },
+      {
+        "id": "3",
+        "title": "Summer Sale",
+        "Description" : "This is some sample description",
+        "BackgroundTemplate": "/template4.jpg",
+        "Image" : "/sample4.jpg",
+        "cta":"Explore Now"
+        
+      },
+      {
+        "id": "4",
+        "title": "Trending Collection",
+        "Description" : "This is some sample description",
+        "BackgroundTemplate": "/template5.jpg",
+        "Image" : "/sample5.jpg",
+        "cta":"Explore Now"
+        
+      },
+      {
+        "id": "5",
+        "title": "Popular Collection",
+        "Description" : "This is some sample description",
+        "BackgroundTemplate": "/template6.jpg",
+        "Image" : "/sample6.jpg",
         "cta":"Explore Now"
         
       }

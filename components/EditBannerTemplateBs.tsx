@@ -39,7 +39,7 @@ const EditBannerTemplateBs = ({
   };
 
   return (
-    <div className="bg-white flex flex-col w-[600px] h-[90%] ">
+    <div className="bg-white flex flex-col w-[600px] h-[90%] rounded-xl ">
       <div className="flex items-center justify-between p-4">
         <p className="text-lg font-semibold text-gray-600">Edit Banner</p>
         <RxCross2
@@ -89,6 +89,30 @@ const EditBannerTemplateBs = ({
             alt="smaple Images"
             className="border-4 border-gray-400 rounded-full h-16 w-16 cursor-pointer "
             onClick={() => setImagesrc("/sample3.jpg")}
+          />
+          <Image
+            src={"/sample4.jpg"}
+            height={60}
+            width={60}
+            alt="smaple Images"
+            className="border-4 border-gray-400 rounded-full h-16 w-16 cursor-pointer "
+            onClick={() => setImagesrc("/sample4.jpg")}
+          />
+          <Image
+            src={"/sample5.jpg"}
+            height={60}
+            width={60}
+            alt="smaple Images"
+            className="border-4 border-gray-400 rounded-full h-16 w-16 cursor-pointer "
+            onClick={() => setImagesrc("/sample5.jpg")}
+          />
+          <Image
+            src={"/sample6.jpg"}
+            height={60}
+            width={60}
+            alt="smaple Images"
+            className="border-4 border-gray-400 rounded-full h-16 w-16 cursor-pointer "
+            onClick={() => setImagesrc("/sample6.jpg")}
           />
         </div>
         <div className="flex flex-col gap-1">
