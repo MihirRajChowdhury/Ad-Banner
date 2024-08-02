@@ -33,6 +33,8 @@ const BannerImageComp = ({
         height={400}
         alt="background-template"
         className="absolute rounded-lg border-4 border-gray-400 inset-0 h-[300px] w-[400px] object-cover"
+        decoding="async"
+        loading="lazy"
       />
       <Image
         src={imgsrc}
@@ -40,6 +42,8 @@ const BannerImageComp = ({
         height={200}
         alt="overlay-image"
         className="absolute border-8 h-[200px] rounded-full top-44 left-[300px] transform -translate-x-1/2 -translate-y-1/2"
+        decoding="async"
+        loading="lazy"
       />
       <div className="absolute flex w-full">
         <div>
