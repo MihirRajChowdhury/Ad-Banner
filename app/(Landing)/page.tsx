@@ -22,7 +22,27 @@ export default function Home() {
     setOpenedBannerId("");
   };
 
-  console.log(bannerdata);
+  const handleBannerUpdate = (
+    bannerId: string,
+    title: string,
+    description: string,
+    buttonText: string,
+    imagesrc: string
+  ) => {
+    const updatedBanners = bannerdata.banners.map((banner) => {
+      if (banner.id === bannerId) {
+        return {
+          ...banner,
+          title: title,
+          Description: description,
+          cta: buttonText,
+          Image: imagesrc,
+        };
+      }
+      return banner;
+    });
+    setBannerdata({ ...bannerdata, banners: updatedBanners });
+  };
 
   return (
     <div className="h-screen  w-full">
@@ -47,6 +67,7 @@ export default function Home() {
                 <EditBannerTemplateBs
                   bannerdata={bannerdata.banners[parseInt(openedBannedId)]}
                   handleClose={handleBannerClose}
+                  handleUpdate={handleBannerUpdate}
                 />
               </div>
             </div>

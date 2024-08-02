@@ -1,6 +1,7 @@
 import { RxCross2 } from "react-icons/rx";
 import BannerImageComp from "./BannerImageComp";
 import { useState } from "react";
+import Image from "next/image";
 
 interface BannerImageCompProps {
   bannerdata: {
@@ -12,18 +13,29 @@ interface BannerImageCompProps {
     cta: string;
   };
   handleClose: () => void;
+  handleUpdate: (
+    bannerId: string,
+    title: string,
+    description: string,
+    buttonText: string,
+    imagesrc: string
+  ) => void;
 }
 
 const EditBannerTemplateBs = ({
   bannerdata,
   handleClose,
+  handleUpdate,
 }: BannerImageCompProps) => {
   const [title, setTitle] = useState(bannerdata.title);
   const [description, setDescription] = useState(bannerdata.Description);
   const [buttonText, setButtonText] = useState(bannerdata.cta);
+  const [imagesrc, setImagesrc] = useState(bannerdata.Image);
 
   const handleEditBanner = () => {
     console.log(bannerdata.id, title, description, buttonText);
+    handleUpdate(bannerdata.id, title, description, buttonText, imagesrc);
+    handleClose();
   };
 
   return (
@@ -38,7 +50,13 @@ const EditBannerTemplateBs = ({
       <div className="ml-24">
         <BannerImageComp
           key={bannerdata.id}
-          {...bannerdata}
+          // {...bannerdata}
+          id={bannerdata.id}
+          title={title}
+          Description={description}
+          BackgroundTemplate={bannerdata.BackgroundTemplate}
+          Image={imagesrc}
+          cta={buttonText}
           clickHandler={handleClose}
           forEdit={false}
         />
@@ -47,6 +65,32 @@ const EditBannerTemplateBs = ({
         className="mt-80 mx-10 overflow-y-auto flex flex-col gap-4
       "
       >
+        <div className="flex items-center gap-4">
+          <Image
+            src={"/sample1.jpg"}
+            height={60}
+            width={60}
+            alt="smaple Images"
+            className="border-4 border-gray-400 rounded-full h-16 w-16 cursor-pointer"
+            onClick={() => setImagesrc("/sample1.jpg")}
+          />
+          <Image
+            src={"/sample2.jpg"}
+            height={60}
+            width={60}
+            alt="smaple Images"
+            className="border-4 border-gray-400 rounded-full h-16 w-16 cursor-pointer"
+            onClick={() => setImagesrc("/sample2.jpg")}
+          />
+          <Image
+            src={"/sample3.jpg"}
+            height={60}
+            width={60}
+            alt="smaple Images"
+            className="border-4 border-gray-400 rounded-full h-16 w-16 cursor-pointer "
+            onClick={() => setImagesrc("/sample3.jpg")}
+          />
+        </div>
         <div className="flex flex-col gap-1">
           <p className="text-[14px] font-semibold text-gray-600">Title</p>
           <input
